@@ -1,10 +1,10 @@
- Analysis Backend
+# Nithya Analysis Backend
 
 Backend API for analyzing dance videos using Google Gemini AI and PostgreSQL.
 
-🚀 Features
+## 🚀 Features
 
-- Video Upload: Accept video files via multipart/form-data
+- **Video Upload**: Accept video files via multipart/form-data
 - **AI Analysis**: Analyze videos using Google Gemini 1.5 Flash/Pro
 - **Database Storage**: Store videos and analysis results in PostgreSQL
 - **History**: Retrieve analysis history for frontend display
@@ -82,20 +82,20 @@ GEMINI_API_KEY=your_gemini_api_key_here
 2. Create a new API key
 3. Copy and paste into `.env`
 
- 5. Install Dependencies
+### 5. Install Dependencies
 
 ```bash
 npm install
 ```
 
- 6. Start the Server
+### 6. Start the Server
 
 **Development mode (with auto-reload):**
 ```bash
 npm run dev
 ```
 
-Production mode:
+**Production mode:**
 ```bash
 npm run build
 npm start
@@ -103,9 +103,9 @@ npm start
 
 The server will start on `http://localhost:5005`
 
- 📡 API Endpoints
+## 📡 API Endpoints
 
- **POST /getanalysis**
+### **POST /getanalysis**
 Upload and analyze a video
 
 **Request:**
@@ -150,7 +150,7 @@ curl -X POST http://localhost:5005/getanalysis \
 }
 ```
 
- **GET /history**
+### **GET /history**
 Get analysis history
 
 **Query Parameters:**
@@ -172,7 +172,7 @@ curl http://localhost:5005/history?status=completed&limit=10
 }
 ```
 
- **GET /analysis/:id**
+### **GET /analysis/:id**
 Get specific analysis by ID
 
 **Example:**
@@ -180,22 +180,22 @@ Get specific analysis by ID
 curl http://localhost:5005/analysis/1
 ```
 
- **DELETE /analysis/:id**
+### **DELETE /analysis/:id**
 Delete analysis and video file
 
-Example:
+**Example:**
 ```bash
 curl -X DELETE http://localhost:5005/analysis/1
 ```
 
- **GET /health**
+### **GET /health**
 Health check endpoint
 
 ```bash
 curl http://localhost:5005/health
 ```
 
- 📁 Project Structure
+## 📁 Project Structure
 
 ```
 nithya-analysis-backend/
@@ -278,7 +278,7 @@ const handleAnalysis = async (videoFile: File) => {
 - **Supported Formats**: MP4, MPEG, MOV, AVI, MKV, WebM
 - **Database**: Analysis results include full Gemini response as JSONB
 
- 🔐 Security Considerations
+## 🔐 Security Considerations
 
 For production deployment:
 - Use environment-specific `.env` files
@@ -289,9 +289,9 @@ For production deployment:
 - Sanitize user inputs
 - Set up proper CORS policies
 
- **📄 License**
+## 📄 License
 
 ISC
-**-analysis-backend
-CrimeDetection_Backend
-CrimeDetection_Backend**
+# nithya-analysis-backend
+# CrimeDetection_Backend
+# CrimeDetection_Backend
